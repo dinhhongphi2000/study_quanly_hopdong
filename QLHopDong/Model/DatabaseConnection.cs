@@ -14,7 +14,7 @@ namespace QLHopDong.Model
     public class DatabaseConnection : IDisposable
     {
         protected SqlConnection _connection = null;
-        private static string _connectionString = "";
+        private static string _connectionString = "Data Source=DESKTOP-K24OQR4;Initial Catalog=QLHopDong; Integrated Security = true; ";
 
         public DatabaseConnection()
         {
@@ -35,7 +35,7 @@ namespace QLHopDong.Model
         /// <summary>
         /// Mở kết nối tới database để truy vấn dữ liệu
         /// </summary>
-        public void OpenConnection()
+        protected void OpenConnection()
         {
             if (_connection.State == System.Data.ConnectionState.Closed)
             {
@@ -46,7 +46,7 @@ namespace QLHopDong.Model
         /// <summary>
         /// Đóng kết nối nếu không còn object nào sử dụng
         /// </summary>
-        public void CloseConnection()
+        protected void CloseConnection()
         {
             if(_connection.State != System.Data.ConnectionState.Closed)
             {
@@ -58,7 +58,7 @@ namespace QLHopDong.Model
         /// Lấy kết nối database
         /// </summary>
         /// <returns></returns>
-        public SqlConnection GetConnection()
+        protected SqlConnection GetConnection()
         {
             return _connection;
         }
