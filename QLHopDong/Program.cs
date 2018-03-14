@@ -16,7 +16,7 @@ namespace QLHopDong
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormHopDong());
+            Application.Run(new MainForm());
         }
     }
 }
