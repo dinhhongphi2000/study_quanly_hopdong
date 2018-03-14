@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLHopDong.Model;
 
 namespace QLHopDong
 {
@@ -15,6 +16,10 @@ namespace QLHopDong
         public FormTui()
         {
             InitializeComponent();
+            KhachHangHandler handler = new KhachHangHandler();
+            
+            DataTable table = handler.LayDuLieu();
+
         }
     }
 }

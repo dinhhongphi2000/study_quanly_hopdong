@@ -10,17 +10,50 @@ namespace QLHopDong.Model
 {
     public class DbHandler : DatabaseConnection
     {
-        private SqlDataAdapter _adapter;
+        private readonly SqlDataAdapter _adapter;
 
-        public DbHandler()
+        public DbHandler(string selectCommand)
         {
             _adapter = new SqlDataAdapter();
-
+            SqlCommand cmd = new SqlCommand(selectCommand,_connection);
+            _adapter.SelectCommand = cmd;
         }
 
-        public DataTable GetData(string query)
+        /// <summary>
+        /// Lấy thông tin khách hàng
+        /// </summary>
+        /// <returns></returns>
+        public DataTable LayDuLieu()
         {
-            return null;
+            DataTable table = new DataTable();
+            //Thực thi lệnh dưới database để lấy dữ liệu
+            try
+            {
+                OpenConnection();
+                _adapter.Fill(table);
+                CloseConnection();
+                return table;
+            }
+            catch (SqlException)
+            {
+                return null;
+            }
+        }
+
+        public virtual bool UpdateDuLieu(DataTable table)
+        {
+            try
+            {
+                //Thực thi lệnh dưới database để thêm khách hàng
+                OpenConnection();
+                _adapter.Update(table);
+                CloseConnection();
+                return true;
+            }
+            catch (SqlException)
+            {
+                return false;
+            }
         }
     }
 }

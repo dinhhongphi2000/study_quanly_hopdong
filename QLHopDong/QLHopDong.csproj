@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="FormBanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +58,10 @@
       <DependentUpon>FormHangHoa.cs</DependentUpon>
     </Compile>
     <Compile Include="FormHopDong.cs">
+=======
+    <Compile Include="Model\DatabaseConnection.cs" />
+    <Compile Include="Form1.cs">
+>>>>>>> ec92c7cd8ee9c46cfdb5f77e8fb06968c1ec4b0e
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
@@ -74,6 +79,8 @@
     <Compile Include="FormTui.Designer.cs">
       <DependentUpon>FormTui.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\DbHandler.cs" />
+    <Compile Include="Model\KhachHangHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
