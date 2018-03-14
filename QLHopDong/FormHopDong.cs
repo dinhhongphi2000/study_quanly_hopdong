@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLHopDong
 {
-    public partial class Form1 : Form
+    public partial class FormHopDong : Form
     {
-        public Form1()
+        public FormHopDong()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace QLHopDong
 {
-    partial class Form1
+    partial class FormHopDong
     {
         /// <summary>
         /// Required designer variable.
