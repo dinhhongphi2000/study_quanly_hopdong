@@ -15,8 +15,9 @@ namespace QLHopDong.Model
         public DbHandler(string selectCommand)
         {
             _adapter = new SqlDataAdapter();
-            SqlCommand cmd = new SqlCommand(selectCommand,_connection);
+            SqlCommand cmd = new SqlCommand(selectCommand, _connection);
             _adapter.SelectCommand = cmd;
+            SqlCommandBuilder builder = new SqlCommandBuilder(_adapter);
         }
 
         /// <summary>
@@ -40,20 +41,12 @@ namespace QLHopDong.Model
             }
         }
 
-        public virtual bool UpdateDuLieu(DataTable table)
+        public virtual void UpdateDuLieu(DataTable table)
         {
-            try
-            {
-                //Thực thi lệnh dưới database để thêm khách hàng
-                OpenConnection();
-                _adapter.Update(table);
-                CloseConnection();
-                return true;
-            }
-            catch (SqlException)
-            {
-                return false;
-            }
+            //Thực thi lệnh dưới database để thêm khách hàng
+            OpenConnection();
+            _adapter.Update(table);
+            CloseConnection();
         }
     }
 }

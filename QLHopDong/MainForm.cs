@@ -27,5 +27,12 @@ namespace QLHopDong
         private void MainForm_Load(object sender, EventArgs e)
         {
         }
+
+        private void quảnLýTúiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTui form = new FormTui();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

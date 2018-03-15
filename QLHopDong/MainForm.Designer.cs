@@ -96,6 +96,7 @@
             this.quảnLýTúiToolStripMenuItem.Name = "quảnLýTúiToolStripMenuItem";
             this.quảnLýTúiToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.quảnLýTúiToolStripMenuItem.Text = "Quản lý túi";
+            this.quảnLýTúiToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTúiToolStripMenuItem_Click);
             // 
             // quảnLýSảnPhẩmToolStripMenuItem
             // 
