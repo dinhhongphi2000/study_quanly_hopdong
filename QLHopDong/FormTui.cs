@@ -94,8 +94,10 @@ namespace QLHopDong
         /// <param name="rowIndex">Vị trí của row cần hiển thị</param>
         private void HienThiDuLieu(int rowIndex)
         {
+            if (rowIndex < 0 || rowIndex >= _tuiTable.Rows.Count)
+                return;
             //Lấy dữ liệu tại vị trí rowIndex
-            var rowSelected = _tuiTable.Rows[dgvTui.CurrentRow.Index];
+            var rowSelected = _tuiTable.Rows[rowIndex];
             //Hiển thị dữ liệu lên textbox nếu rowIndex valid
             if (rowSelected != null)
             {

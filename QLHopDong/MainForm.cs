@@ -41,5 +41,12 @@ namespace QLHopDong
             form.MdiParent = this;
             form.Show();
         }
+
+        private void quảnLýSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormHangHoa form = new FormHangHoa();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

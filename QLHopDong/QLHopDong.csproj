@@ -77,6 +77,7 @@
     <Compile Include="Model\BanhHandler.cs" />
     <Compile Include="Model\DbHandler.cs" />
     <Compile Include="Model\DatabaseConnection.cs" />
+    <Compile Include="Model\HangHoaHandler.cs" />
     <Compile Include="Model\KhachHangHandler.cs" />
     <Compile Include="Model\TuiHandler.cs" />
     <Compile Include="Program.cs" />
