@@ -200,8 +200,6 @@ namespace QLHopDong
                 //hiển thị dữ liệu của row đó lên textbox
                 HienThiDuLieu(rowSelected.Index);
             }
-
-
         }
 
         /// <summary>

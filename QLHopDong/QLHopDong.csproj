@@ -74,6 +74,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\BanhHandler.cs" />
     <Compile Include="Model\DbHandler.cs" />
     <Compile Include="Model\DatabaseConnection.cs" />
     <Compile Include="Model\KhachHangHandler.cs" />
