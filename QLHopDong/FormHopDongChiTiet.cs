@@ -71,6 +71,7 @@ namespace QLHopDong
                 //Form đang thực hiện thao tác xem chi tiết
                 //disable các control để không cho user chỉnh sửa
                 pnlData.Enabled = false;
+                btnXoa.Visible = false;
                 dgvChiTietHD.AllowUserToAddRows = false;
                 btnCapNhat.Visible = false;
                 HienThiDuLieu(soHD);
@@ -346,38 +347,52 @@ namespace QLHopDong
         {
             if (rowIndex == -1)
             {
+                
                 decimal tongtien = 0;
                 //Tính thành tiền của toàn bộ bảng
                 for (int i = 0; i < _chiTietHDTable.Rows.Count; i++)
                 {
                     DataRow row = _chiTietHDTable.Rows[i];
-                    if (row["SoLuong"] != null && row["DonGia"] != null)
+                    if (row["SoLuong"] != DBNull.Value && row["DonGia"] != DBNull.Value)
                     {
                         decimal thanhtien = decimal.Parse(row["SoLuong"].ToString()) * decimal.Parse(row["DonGia"].ToString());
                         tongtien += thanhtien;
                         dgvChiTietHD.Rows[i].Cells["ThanhTien"].Value = thanhtien;
                     }
                 }
+
                 //tổng tiền sau khi áp dụng thuế suất
+                if (txtThueSuat.Text == String.Empty)
+                    return;
                 tongtien += tongtien * ( decimal.Parse(txtThueSuat.Text) / 100);
                 txtTongTien.Text = tongtien.ToString("#,##");
             }
             else
             {
+                if (txtTongTien.Text == String.Empty)
+                    return;
                 decimal tongtien = decimal.Parse(txtTongTien.Text);
                 //Tính thành tiền của một hàng cụ thể
                 DataRow row = _chiTietHDTable.Rows[rowIndex];
-                if (row["SoLuong"] != null && row["DonGia"] != null)
+                if (row["SoLuong"] != DBNull.Value && row["DonGia"] != DBNull.Value)
                 {
                     decimal thanhtien = decimal.Parse(row["SoLuong"].ToString()) * decimal.Parse(row["DonGia"].ToString());
                     tongtien += thanhtien;
                     dgvChiTietHD.Rows[rowIndex].Cells["ThanhTien"].Value = thanhtien;
                     //tổng tiền sau khi áp dụng thuế suất
+                    if (txtThueSuat.Text == String.Empty)
+                        return;
                     tongtien += thanhtien * (decimal.Parse(txtThueSuat.Text) / 100 );
                     txtTongTien.Text = tongtien.ToString("#,##");
                 }
                 
             }
+        }
+
+        private void txtThueSuat_Leave(object sender, EventArgs e)
+        {
+            //cập nhật lại tổng tiền khi thuế suất thay đổi
+            HienThiTongTien();
         }
     }
 }

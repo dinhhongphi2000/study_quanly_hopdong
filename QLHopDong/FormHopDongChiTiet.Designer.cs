@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtSoHD = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -229,13 +229,13 @@
             // btnCapNhat
             // 
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.Location = new System.Drawing.Point(477, 536);
+            this.btnCapNhat.Location = new System.Drawing.Point(450, 536);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(150, 46);
+            this.btnCapNhat.Size = new System.Drawing.Size(177, 46);
             this.btnCapNhat.TabIndex = 15;
             this.btnCapNhat.Tag = "Edit";
-            this.btnCapNhat.Text = "Cập nhật hóa đơn";
+            this.btnCapNhat.Text = "Cập nhật hợp đồng";
             this.btnCapNhat.UseVisualStyleBackColor = true;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
@@ -269,6 +269,7 @@
             this.txtThueSuat.Name = "txtThueSuat";
             this.txtThueSuat.Size = new System.Drawing.Size(83, 26);
             this.txtThueSuat.TabIndex = 3;
+            this.txtThueSuat.Leave += new System.EventHandler(this.txtThueSuat_Leave);
             // 
             // pnlData
             // 
@@ -345,16 +346,16 @@
             // DonGia
             // 
             this.DonGia.DataPropertyName = "DonGia";
-            dataGridViewCellStyle3.Format = "N2";
-            this.DonGia.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Format = "N2";
+            this.DonGia.DefaultCellStyle = dataGridViewCellStyle7;
             this.DonGia.HeaderText = "Đơn giá";
             this.DonGia.Name = "DonGia";
             // 
             // ThanhTien
             // 
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle8;
             this.ThanhTien.HeaderText = "Thành tiền";
             this.ThanhTien.Name = "ThanhTien";
             // 

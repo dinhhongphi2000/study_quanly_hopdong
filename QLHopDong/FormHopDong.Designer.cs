@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvHopDong = new System.Windows.Forms.DataGridView();
+            this.btnChiTiet = new System.Windows.Forms.Button();
             this.SoHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayHetHanHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,7 +41,6 @@
             this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThueSuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnChiTiet = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHopDong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +104,17 @@
             this.dgvHopDong.Size = new System.Drawing.Size(774, 364);
             this.dgvHopDong.TabIndex = 16;
             // 
+            // btnChiTiet
+            // 
+            this.btnChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChiTiet.Location = new System.Drawing.Point(451, 18);
+            this.btnChiTiet.Name = "btnChiTiet";
+            this.btnChiTiet.Size = new System.Drawing.Size(126, 46);
+            this.btnChiTiet.TabIndex = 12;
+            this.btnChiTiet.Text = "Chi tiết";
+            this.btnChiTiet.UseVisualStyleBackColor = true;
+            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
+            // 
             // SoHD
             // 
             this.SoHD.DataPropertyName = "SoHD";
@@ -148,20 +160,11 @@
             // Tong
             // 
             this.Tong.DataPropertyName = "Tong";
+            dataGridViewCellStyle1.Format = "N2";
+            this.Tong.DefaultCellStyle = dataGridViewCellStyle1;
             this.Tong.HeaderText = "Tổng tiền";
             this.Tong.Name = "Tong";
             this.Tong.ReadOnly = true;
-            // 
-            // btnChiTiet
-            // 
-            this.btnChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChiTiet.Location = new System.Drawing.Point(451, 18);
-            this.btnChiTiet.Name = "btnChiTiet";
-            this.btnChiTiet.Size = new System.Drawing.Size(126, 46);
-            this.btnChiTiet.TabIndex = 12;
-            this.btnChiTiet.Text = "Chi tiết";
-            this.btnChiTiet.UseVisualStyleBackColor = true;
-            this.btnChiTiet.Click += new System.EventHandler(this.btnChiTiet_Click);
             // 
             // FormHopDong
             // 
