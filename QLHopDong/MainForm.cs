@@ -48,5 +48,12 @@ namespace QLHopDong
             form.MdiParent = this;
             form.Show();
         }
+
+        private void quảnLýHợpĐồngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormHopDong form = new FormHopDong();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

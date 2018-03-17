@@ -21,6 +21,43 @@ namespace QLHopDong.Model
         }
 
         /// <summary>
+        /// Thiết lập update command
+        /// </summary>
+        protected void SetUpdateCommand(string updateCommand)
+        {
+            _adapter.UpdateCommand = new SqlCommand(updateCommand,_connection);
+        }
+
+        /// <summary>
+        /// Thiết lập select command
+        /// </summary>
+        /// <param name="selectCommand"></param>
+        protected void SetSelectCommand(string selectCommand)
+        {
+            _adapter.SelectCommand = new SqlCommand(selectCommand, _connection);
+            //re-generate command
+            SqlCommandBuilder builder = new SqlCommandBuilder(_adapter);
+        }
+
+        /// <summary>
+        /// Thiết lập insert command
+        /// </summary>
+        /// <param name="insertCommand"></param>
+        protected void SetInsertCommand(string insertCommand)
+        {
+            _adapter.InsertCommand = new SqlCommand(insertCommand);
+        }
+
+        /// <summary>
+        /// Thiết lập delete command
+        /// </summary>
+        /// <param name="deleteCommand"></param>
+        protected void SetDeleteCommand(string deleteCommand)
+        {
+            _adapter.DeleteCommand = new SqlCommand(deleteCommand,_connection);
+        }
+
+        /// <summary>
         /// Lấy thông tin khách hàng
         /// </summary>
         /// <returns></returns>

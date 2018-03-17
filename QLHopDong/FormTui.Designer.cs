@@ -35,13 +35,13 @@
             this.txtMaTui = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.pnlData = new System.Windows.Forms.Panel();
             this.dgvTui = new System.Windows.Forms.DataGridView();
             this.MaTui = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiTui = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCapNhat = new System.Windows.Forms.Button();
-            this.pnlData = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTui)).BeginInit();
             this.pnlData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTui)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSua
@@ -114,42 +114,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Mã Túi";
             // 
-            // dgvTui
-            // 
-            this.dgvTui.AllowUserToAddRows = false;
-            this.dgvTui.AllowUserToDeleteRows = false;
-            this.dgvTui.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvTui.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dgvTui.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTui.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaTui,
-            this.LoaiTui});
-            this.dgvTui.Location = new System.Drawing.Point(2, 151);
-            this.dgvTui.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dgvTui.MultiSelect = false;
-            this.dgvTui.Name = "dgvTui";
-            this.dgvTui.ReadOnly = true;
-            this.dgvTui.RowHeadersVisible = false;
-            this.dgvTui.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTui.Size = new System.Drawing.Size(592, 227);
-            this.dgvTui.TabIndex = 10;
-            this.dgvTui.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellDoubleClick);
-            // 
-            // MaTui
-            // 
-            this.MaTui.DataPropertyName = "Ma";
-            this.MaTui.HeaderText = "Mã túi";
-            this.MaTui.Name = "MaTui";
-            this.MaTui.ReadOnly = true;
-            // 
-            // LoaiTui
-            // 
-            this.LoaiTui.DataPropertyName = "Loai";
-            this.LoaiTui.HeaderText = "Loại túi";
-            this.LoaiTui.Name = "LoaiTui";
-            this.LoaiTui.ReadOnly = true;
-            // 
             // btnCapNhat
             // 
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,13 +138,48 @@
             this.pnlData.Size = new System.Drawing.Size(259, 83);
             this.pnlData.TabIndex = 12;
             // 
+            // dgvTui
+            // 
+            this.dgvTui.AllowUserToAddRows = false;
+            this.dgvTui.AllowUserToDeleteRows = false;
+            this.dgvTui.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTui.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvTui.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTui.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaTui,
+            this.LoaiTui});
+            this.dgvTui.Location = new System.Drawing.Point(12, 157);
+            this.dgvTui.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvTui.MultiSelect = false;
+            this.dgvTui.Name = "dgvTui";
+            this.dgvTui.ReadOnly = true;
+            this.dgvTui.RowHeadersVisible = false;
+            this.dgvTui.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTui.Size = new System.Drawing.Size(570, 208);
+            this.dgvTui.TabIndex = 16;
+            // 
+            // MaTui
+            // 
+            this.MaTui.DataPropertyName = "Ma";
+            this.MaTui.HeaderText = "Mã túi";
+            this.MaTui.Name = "MaTui";
+            this.MaTui.ReadOnly = true;
+            // 
+            // LoaiTui
+            // 
+            this.LoaiTui.DataPropertyName = "Loai";
+            this.LoaiTui.HeaderText = "Loại túi";
+            this.LoaiTui.Name = "LoaiTui";
+            this.LoaiTui.ReadOnly = true;
+            // 
             // FormTui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 379);
-            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.dgvTui);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
@@ -190,9 +189,9 @@
             this.Name = "FormTui";
             this.Text = "FormTui";
             this.Load += new System.EventHandler(this.FormTui_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTui)).EndInit();
             this.pnlData.ResumeLayout(false);
             this.pnlData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTui)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,10 +206,10 @@
         private System.Windows.Forms.TextBox txtMaTui;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCapNhat;
+        private System.Windows.Forms.Panel pnlData;
         private System.Windows.Forms.DataGridView dgvTui;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTui;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiTui;
-        private System.Windows.Forms.Button btnCapNhat;
-        private System.Windows.Forms.Panel pnlData;
     }
 }
